@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
-# from models import db, connect_db
  
  
  
@@ -44,7 +43,6 @@ class Data(db.Model):
 @app.route('/')
 def Index():
     all_data = Data.query.all()
- 
     return render_template("index.html", employees = all_data)
  
  
